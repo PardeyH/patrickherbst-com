@@ -65,7 +65,7 @@ contactForm.addEventListener("submit", sendEmail)
 const scrollUp = () => {
     const scrollUp = document.getElementById("scroll-up");
 
-    // When the scroll is higher than 250 viewport height, add the show-scroll class to the a tag with the scrollup
+    // When the scroll is higher than 250 viewport height, add the show-scroll class to the "a tag" with the scrollup
     this.scrollY >= 250 ? scrollUp.classList.add("show-scroll")
                         : scrollUp.classList.remove("show-scroll");
 }
@@ -75,12 +75,13 @@ window.addEventListener("scroll", scrollUp);
 const sections = document.querySelectorAll("section[id]");
 
 const scrollActive = () => {
-    const scrollY = window.pageYOffset;
+    // const scrollY = window.scrollY;
 
     sections.forEach(current => {
         const sectionHeight = current.offsetHeight;
         const sectionTop = current.offsetTop - 58;
         const sectionId = current.getAttribute("id");
+        console.log(sectionId);
         const sectionsClass = document.querySelector(".nav__menu a[href*=" + sectionId + "]");
 
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
