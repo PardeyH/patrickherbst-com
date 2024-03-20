@@ -33,3 +33,30 @@ const blurHeader = () => {
                         : header.classList.remove("blur-header");
 }
 window.addEventListener("scroll", blurHeader);
+
+// EMAIL JS
+const contactForm = document.getElementById("contact-form");
+const contactMessage = document.getElementById("contact-message");
+
+const sendEmail = (e) => {
+    e.preventDefault();
+
+    // serviceID - templateID - #form - publicKey
+    emailjs.sendForm("service_458gvwq", "template_3x0ezr6", "#contact-form", "E7-jv6yi6bsim15zf")
+        .then(() => {
+            contactMessage.textContent = "Message sent successfully ✅";
+
+            // remove message after 5 seconds
+            setTimeout(() => {
+               contactMessage.textContent = "";
+            }, 5000);
+
+            // clear input fields
+            contactForm.reset();
+        }, () => {
+            // Show error message
+            contactMessage.textContent = "Message not sent (service error) ❌";
+        });
+}
+
+contactForm.addEventListener("submit", sendEmail)
