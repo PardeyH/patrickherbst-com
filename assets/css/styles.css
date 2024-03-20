@@ -1,10 +1,11 @@
+/*=============== GOOGLE FONTS ===============*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
-/* Variables CSS */
+/*=============== VARIABLES CSS ===============*/
 :root{
     --header-height: 3.5rem;
 
-    /* Colors */
+    /*========== Colors ==========*/
     /* Color mode HSL(hue, saturation, lightness)*/
     /*
         Change favorite color
@@ -26,7 +27,7 @@
     --body-color: hsl(228, 15%, 20%);
     --container-color: hsl(228, 15%, 15%);
 
-    /* Font and typography */
+    /*========== Font and typography ==========*/
     --body-font: "Poppins", sans-serif;
     --biggest-font-size: 2rem;
     --bigger-font-size: 1.25rem;
@@ -37,17 +38,17 @@
     --small-font-size: .813rem;
     --smaller-font-size: .75rem;
 
-    /* Font weight */
+    /*========== Font weight ==========*/
     --font-regular: 400;
     --font-medium: 500;
     --font-semi-bold: 600;
 
-    /* z index */
+    /*========== z index ==========*/
     --z-tooltip: 10;
     --z-fixed: 100;
 }
 
-/* Responsive typography */
+/*========== Responsive typography ==========*/
 @media screen and (min-width: 1152px) {
     :root {
         --biggest-font-size: 4rem;
@@ -61,7 +62,7 @@
     }
 }
 
-/* BASE */
+/*=============== BASE ===============*/
 *{
     box-sizing: border-box;
     padding: 0;
@@ -110,7 +111,7 @@ img, svg {
     height: auto;
 }
 
-/* REUSABLE CSS CLASSES */
+/*=============== REUSABLE CSS CLASSES ===============*/
 .container {
     max-width: 1120px;
     margin-inline: 1.5rem;
@@ -150,7 +151,7 @@ img, svg {
     overflow: hidden; /* for animations ScrollReveal */
 }
 
-/* HEADER & NAV */
+/*=============== HEADER & NAV ===============*/
 .header {
     position: fixed;
     width: 100%;
@@ -227,7 +228,7 @@ img, svg {
     right: 0;
 }
 
-/* add blur to header */
+/* Add blur to header */
 .blur-header {
     background-color: transparent;
 }
@@ -245,9 +246,9 @@ img, svg {
     z-index: -1;
 }
 
-/* active link */
+/* Active link */
 
-/* home */
+/*=============== HOME ===============*/
 .home{
     background-color: var(--container-color);
 }
@@ -320,7 +321,7 @@ img, svg {
     transform: translateX(-120px);
 }
 
-/* button */
+/*=============== BUTTON ===============*/
 .button {
     display: inline;
     background-color: var(--first-color);
@@ -335,7 +336,7 @@ img, svg {
     box-shadow: 0 8px 24px hsla(var(--hue), 100%, 40%, .25);
 }
 
-/* ABOUT */
+/*=============== ABOUT ===============*/
 .about__container {
     row-gap: 2.5rem;
 }
@@ -364,3 +365,76 @@ img, svg {
     width: 900px;
     transform: translateX(-120px);
 }
+
+/*=============== SKILLS ===============*/
+.skills {
+    background-color: var(--container-color);
+}
+
+.skills__container {
+    padding-bottom: 2rem;
+    row-gap: 3.5rem;
+}
+
+.skills__data {
+    text-align: center;
+}
+
+.skills__description {
+    margin-bottom: 2rem;
+}
+
+.skills__content,
+.skills__group {
+    display: grid;
+}
+
+.skills__content {
+    grid-template-columns: repeat(2, max-content);
+    column-gap: 4rem;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.skills__group {
+    row-gap: 1rem;
+    list-style: decimal-leading-zero;
+}
+
+.skills__item {
+    font-weight: var(--font-medium);
+    color: var(--title-color);
+}
+
+.skills__item::marker {
+    color: var(--first-color);
+}
+/*=============== SERVICES ===============*/
+
+
+/*=============== PROJECTS ===============*/
+
+
+/*=============== CONTACT ===============*/
+
+
+/*=============== FOOTER ===============*/
+
+
+/*=============== SCROLL BAR ===============*/
+
+
+/*=============== SCROLL UP ===============*/
+
+
+/* Show Scroll Up */
+
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+
+
+/* For medium devices */
+
+
+/* For large devices */
