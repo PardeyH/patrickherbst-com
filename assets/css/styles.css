@@ -227,6 +227,26 @@ img, svg {
     right: 0;
 }
 
+/* add blur to header */
+.blur-header {
+    background-color: transparent;
+}
+
+.blur-header::after {
+    content: "";
+    position: absolute;
+    width: 1000%;
+    height: 100%;
+    background-color: hsla(0, 0%, 10%, 0.3);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px); /* for safari */
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* active link */
+
 /* home */
 .home{
     background-color: var(--container-color);
@@ -313,4 +333,29 @@ img, svg {
 
 .button:hover {
     box-shadow: 0 8px 24px hsla(var(--hue), 100%, 40%, .25);
+}
+
+/* ABOUT */
+.about__container {
+    row-gap: 2.5rem;
+}
+
+.about__data {
+    text-align: center;
+}
+
+.about__description {
+    margin-bottom: 2rem;
+}
+
+.about__image {
+    justify-self: center;
+}
+
+.about__blob {
+    width: 320px;
+}
+
+.about__blob path {
+    stroke: var(--first-color);
 }
