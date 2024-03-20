@@ -359,3 +359,8 @@ img, svg {
 .about__blob path {
     stroke: var(--first-color);
 }
+
+.about__img {
+    width: 900px;
+    transform: translateX(-120px);
+}
